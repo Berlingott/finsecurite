@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titre %}Accueil{% endblock %}
+{% block bodyContenu %}
+{% if usager.role == "admin" or usager.role == "autheur" %}
+<div class="modal-title d-flex justify-content-center">
+<h1>Faire un Article</h1>
+</div>
+<div class="justify-content-around ">
+    <form method="POST">
+        <textarea name="textArticle"  id="textArticle" class="form-control"></textarea>
+        <div class="boutonSoumissionPoste d-flex justify-content-around" >
+            <button type="submit" class="btn bg-info border-dark d-flex justify-content-center">Soumettre</button>
+        </div>
+    </form>
+</div>
+{% else %}
+<H4>Veuillez demander les accès autheur à votre administrateur afin de pouvoir publier.</H4>
+{% endif %}
+
+{% endblock %}

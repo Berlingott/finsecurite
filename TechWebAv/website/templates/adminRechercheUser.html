@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titre %}Login{% endblock %}
+{% block bodyContenu %}
+<div class="modal-title d-flex justify-content-center">
+<h1>Rechercher un utilisateur</h1>
+</div>
+<div class="justify-content-around ">
+    <form method="POST">
+        <textarea name="adminrechercheuseagerSoumis"  id="adminrechercheuseagerSoumis" class="form-control"></textarea>
+        <div class="boutonSoumissionPoste d-flex justify-content-around" >
+            <button type="submit" class="btn bg-info border-dark d-flex justify-content-center">Soumettre</button>
+        </div>
+    </form>
+</div>
+{% block suiteAdminPannel %}{% endblock %}
+{% endblock %}
